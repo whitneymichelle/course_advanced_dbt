@@ -9,7 +9,7 @@ models:
           - unique
 
       - name: created_at
-        description: When the user was created.
+        description: '{{ doc("created_at") }}'
         tests:
           - not_null
 

@@ -1,5 +1,11 @@
 # Welcome to the Bingeflix Data Team
 
+#### Week 1 Short Answers
+To resolve dbt_project_evaluator warnings, I:
+- created missing .yml file
+- increased the model fanout threshold
+- added a database description
+
 ### Coding Conventions
 #### General
 - Use UPPER case for all keywords

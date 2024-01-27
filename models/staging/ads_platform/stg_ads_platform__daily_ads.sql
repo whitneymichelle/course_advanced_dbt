@@ -1,6 +1,6 @@
 WITH source AS (
 
-    SELECT * FROM {{ source('ads_platform', 'daily_ads') }}
+    SELECT * FROM {{ source('ads_platform', 'ads') }}
 
 ),
 
