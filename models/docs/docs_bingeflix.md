@@ -18,7 +18,7 @@ The name of the event.
 {% enddocs %}
 
 {% docs bingeflix_column_user_id %}
-The unique identifier of the Bingeflix user. 
+The unique identifier of the Bingeflix user.
 {% enddocs %}
 
 {% docs session_id %}

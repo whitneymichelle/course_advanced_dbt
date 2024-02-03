@@ -34,6 +34,9 @@ models:
       - name: mrr_change
         description: The change in monthly recurring revenue from the associated subscription versus last month.
 
+      - name: avg_3_periods_mrr
+        description: rolling three month average per subscription
+
       - name: retained_mrr_amount
         description: The amount of monthly recurring revenue associated with the subscription retained from the previous month.
 

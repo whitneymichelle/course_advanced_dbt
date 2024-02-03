@@ -5,4 +5,4 @@ sources:
     database: raw
     tables:
       - name: ads
-        description: This table contains information about Bingeflix's marketing ads. 
+        description: This table contains information about Bingeflix's marketing ads.

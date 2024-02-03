@@ -1,0 +1,28 @@
+version: 2
+
+macros:
+  - name: rolling_average_periods
+    description: A macro to create a rolling average
+    arguments:
+      - name: column_name
+        type: number
+        description: column name on which to calculate rolling average
+      - name: partition_by
+        type: varchar
+        description: column on which to partition window function
+      - name: max_time
+        type: number
+        description: max time of rolling average, for 3 day rolling average this number would be 2, default = 2
+      - name: order_by
+        type: timestamp
+        description: timestamp to order partition, default = created_at
+
+  - name: date_trunc_and_cast
+    description: truncates the date to specified date part then casts the output to a date
+    arguments:
+      - name: date_part
+        type: varchar
+        description: date parts as decribed here https://docs.snowflake.com/en/sql-reference/functions/year
+      - name: date_or_timestamp
+        type: date or timestamp
+        description: date or timestamp to be truncated

@@ -176,6 +176,7 @@ final AS (
         subscription_periods.ends_at,
         subscription_periods.plan_name,
         mrr AS mrr_amount,
+        {{ rolling_average_periods('mrr', partition_by = 'mrr_with_changes.subscription_id', order_by = 'mrr_with_changes.date_month') }},
         mrr_change,
         LEAST(mrr, previous_month_mrr_amount) AS retained_mrr_amount,
         previous_month_mrr_amount,
