@@ -1,0 +1,9 @@
+models:
+  - name: int_subscription_periods
+    description: ""
+    columns:
+      - name: subscription_id
+        description: primary key
+        tests:
+          - unique
+          - not_null

@@ -1,4 +1,7 @@
-{{ config(materialized='table') }}
+{{ config(
+        materialized='incremental',
+        unique_key='session_id')
+    }}
 
 SELECT
     session_id,
@@ -8,3 +11,9 @@ SELECT
     event_id
 
 FROM {{ ref('stg_bingeflix__events') }}
+
+{% if is_incremental() %}
+
+ {{ filter_incremental_model() }}
+
+{% endif %}

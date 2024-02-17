@@ -2,6 +2,17 @@ name: 'course_advanced_dbt'
 version: '1.0.0'
 config-version: 2
 
+dispatch:
+  - macro_namespace: dbt
+    search_order:
+      - course_advanced_dbt
+      - dbt_snowflake_monitoring
+      - dbt
+
+query-comment:
+  comment: '{{ dbt_snowflake_monitoring.get_query_comment(node) }}'
+  append: true # Snowflake removes prefixed comments.
+
 vars:
   dbt_project_evaluator:
     models_fanout_threshold: 10
